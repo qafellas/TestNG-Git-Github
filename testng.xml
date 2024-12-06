@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/demir/IdeaProjects/TestNG-Git-Github">
+<suite name="Test Suite">
+    <test verbose="2" preserve-order="true" enabled="false" name="Smoke tests">
         <classes>
             <class name="org.qafellas.tests.ExampleTests">
                 <methods>
@@ -17,6 +17,16 @@
                     <include name="upperCaseTest"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test name="Regression tests" parallel="classes">
+        <classes>
+            <class name="org.qafellas.tests.Annotations1"/>
+            <class name="org.qafellas.tests.Annotations2"/>
+            <class name="org.qafellas.tests.Annotations3"/>
+            <class name="org.qafellas.tests.ArrayTests"/>
+            <class name="org.qafellas.tests.ExampleTests"/>
+            <class name="org.qafellas.tests.StringTests"/>
         </classes>
     </test>
 </suite>
