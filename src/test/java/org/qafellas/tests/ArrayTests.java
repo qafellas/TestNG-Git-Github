@@ -13,7 +13,7 @@ public class ArrayTests {
         Assert.assertEquals(af.sumOfElements(arr), 24, "The sum is not correct");
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void findMaxNumber(){
         ArrayFunctions af = new ArrayFunctions();
         int[] arr = {9,3,78,-5,45};

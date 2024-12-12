@@ -13,7 +13,7 @@ public class ArithmeticFunctions {
         return x * y;
     }
 
-    public int division(int x, int y){
+    public double division(double x, double y){
         return x / y;
     }
 }

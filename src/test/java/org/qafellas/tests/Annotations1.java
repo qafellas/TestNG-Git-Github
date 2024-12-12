@@ -15,7 +15,7 @@ public class Annotations1 {
         System.out.println("After method runs after every test method");
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void test1(){
         System.out.println("---TC1----");
     }
