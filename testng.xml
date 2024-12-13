@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Suite">
-    <test verbose="2" preserve-order="true" enabled="false" name="Smoke tests">
-        <classes>
-            <class name="org.qafellas.tests.ExampleTests">
-                <methods>
-                    <include name="setUp"/>
-                    <include name="test1"/>
-                    <include name="atest2"/>
-                    <include name="test3"/>
-                    <include name="tearDown"/>
-                </methods>
-            </class>
-            <class name="org.qafellas.tests.StringTests">
-                <methods>
-                    <include name="upperCaseTest"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="Regression tests" parallel="classes">
+    <parameter name="productName" value="pen"/>
+    <parameter name="quantity" value="5"/>
+    <test name="Regression tests">
         <classes>
             <class name="org.qafellas.tests.Annotations1"/>
             <class name="org.qafellas.tests.Annotations2"/>
@@ -27,6 +11,9 @@
             <class name="org.qafellas.tests.ArrayTests"/>
             <class name="org.qafellas.tests.ExampleTests"/>
             <class name="org.qafellas.tests.StringTests"/>
+            <class name="org.qafellas.tests.ArithmeticTests"/>
+            <class name="org.qafellas.tests.DataProviderTest"/>
+            <class name="org.qafellas.tests.ParametersTest"/>
         </classes>
     </test>
 </suite>
