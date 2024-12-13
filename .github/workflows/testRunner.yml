@@ -27,3 +27,12 @@ jobs:
     - name: Run tests
       run: mvn clean test -Dfile="testng.xml"
 
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: always()    # run this step even if previous step failed
+      with:
+        name: TestNG Tests            # Name of the check run which will be created
+        path: target/surefire-reports/junitreports/*.xml    # Path to test results
+        reporter: java-junit       # Format of test results
+        max-annotations: '30'
+
