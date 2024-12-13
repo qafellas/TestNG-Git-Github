@@ -17,6 +17,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install nodejs and npm
+      uses: actions/setup-node@v3
+      with:
+           node-version: 18
+
+    - name: Install junit merge package
+      run: npm install -g junit-merge
+
     - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
@@ -27,12 +35,16 @@ jobs:
     - name: Run tests
       run: mvn clean test -Dfile="testng.xml"
 
+    - name: Merge junit xml reports
+      if: always()
+      run: junit-merge -o target/results.xml -d target/surefire-reports/junitreports/
+
     - name: Test Report
       uses: dorny/test-reporter@v1
       if: always()    # run this step even if previous step failed
       with:
         name: TestNG Tests            # Name of the check run which will be created
-        path: target/surefire-reports/junitreports/*.xml    # Path to test results
+        path: target/results.xml    # Path to test results
         reporter: java-junit       # Format of test results
         max-annotations: '30'
 
