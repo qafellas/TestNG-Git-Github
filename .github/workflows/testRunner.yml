@@ -5,6 +5,10 @@ on:
   push:
     branches: [ "master" ]
 
+  schedule:
+      - cron: '0 5 * * 3' #UTC
+
+
 permissions:
   id-token: write
   contents: read
