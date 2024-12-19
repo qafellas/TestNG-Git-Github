@@ -59,6 +59,6 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN}}
       run: | 
         echo "Test Results Outputs: "
-        echo "steps.test_report.outputs"
+        echo "${{ steps.test_report.outputs }}"
       
 
