@@ -17,7 +17,7 @@ public class StringTests {
     @Test(description = "should convert a string to uppercase one")
     public void upperCaseTest(){
         String str = "Orlando";
-        String expected = "ORLANDo";
+        String expected = "ORLANDO";
         String actual = sf.toUpperCase(str);
         //Verify the result
         Assert.assertEquals(actual, expected, "It is not a match");
