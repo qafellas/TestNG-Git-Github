@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class StringTests {
     StringFunctions sf;
-
+    // This is a comment
     @BeforeClass
     public void setUp(){
          sf = new StringFunctions();
