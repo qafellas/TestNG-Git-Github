@@ -31,7 +31,7 @@ public class StringTests {
 
     @Test
     public void stringContainsLetter(){
-        boolean status = sf.contains("New york", "k");
+        boolean status = sf.contains("New York", "k");
         Assert.assertEquals(status, true);
     }
 
