@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class Annotations1 {
     @BeforeMethod
     public void beforeMethod(){
-        System.out.println("Before method runs before every test method...");
+        System.out.println("Before method runs before every test method");
     }
 
     @AfterMethod
