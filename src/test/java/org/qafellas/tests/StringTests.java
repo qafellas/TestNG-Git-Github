@@ -29,4 +29,10 @@ public class StringTests {
         Assert.assertEquals(sf.reverseString(str), "pac");
     }
 
+    @Test
+    public void stringContainsLetter(){
+        boolean status = sf.contains("New york", "k");
+        Assert.assertEquals(status, true);
+    }
+
 }

@@ -13,4 +13,8 @@ public class StringFunctions {
         }
         return reversed;
     }
+
+    public boolean contains(String str, String letter){
+        return str.contains(letter);
+    }
 }
